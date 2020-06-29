@@ -1,0 +1,14 @@
+PRZED pierwszym uruchomieniem dodaj ControlsFX9.0.0 do bibloteki projektu. inaczej b?dzi? bajzel i nie b?dzie dzia?a?*
+*dobrze w ka?dym razie btw. powinienie? mie? jave 1.8 lub nowsz?.
+
+Aplikacja ??czy 2 projekty i cz??? 3; czat TCP, Maryna?, I wst?p do czatu UDP. Start w klasie APP w paczce STAGES;
+
+Comms => komunikacja mi?dzy klijentami
+Game => identyfikacja + baza danych
+Stages => okienka
+
+Z pewnych wzgl?dów aplikacja wykorzystuje terminal jako LOG; i zrzuca tam CZ??? b??dów, te bardziej przemnie spodziewane s? ob?ugiwane przez ErrorPopup.
+
+Komunikacja Paczki Comms z Stages jest trudna (jedno dzia?a na FX a drugie na Thread) z tego powodu w programie jest kilka nietypowych rzeczy, jak np. przerzucnie si? Consumerami itd. Gernerlna regu?? jest taka: Box jest magiczny i reszty aplikacji nie obchodzi jak dzia?a ani co robi, Box z kolei z nie jest zawsze w stanie porzumie? si? bezpo?rednio z aplikacj? wi?c wysy?a jej "pocztówki" (kod 900).
+
+Je?eli chcesz zroumie? jak to dzia?? polecam najpierw uruchomi? sobie 2 klinetów (bez argumentów inicjalizacyjnych, same sobie jakie? wymy?l?), po??czy? je (Chat => /Con xxxx.xxxx.xxxx.xxxx yyyy dane o IP i porcie masz w tytule okna) i odpali? czat. Potestujsobie jak to dzia??, zobacz co si? stanie jak si? roz??czysz a co jak u?yjesz komendy /kill itd.
